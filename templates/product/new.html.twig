@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+    <div class="new_product">
+    {{ form_start(form) }}
+    <h4>{{ form_widget(form) }}</h4>
+        <button class="btn btn-outline-dark button-new"><i class="fas fa-cart-arrow-down caddie"></i></button>
+    {{ form_end(form) }}
+        <div class="arrow">
+            <a class="lien" href="{{ path('product_index') }}"><i class="far fa-arrow-alt-circle-left arrow"></i></a>
+            <a class="lien" href="{{ path('category_index') }}"><i class="far fa-arrow-alt-circle-right arrow"></i></a>
+        </div>
+        <div>
+            <img class="product-img" src="{{ 'https://www.cjoint.com/doc/21_02/KBeoKyxvkgX_panier-de-pique-nique-avec-la-nourriture-24634052-removebg-preview.png' }}" alt="food">
+        </div>
+    </div>
+{% endblock %}

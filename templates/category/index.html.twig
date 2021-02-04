@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}catégories{% endblock %}
+
+{% block body %}
+<div class="home">
+    <div class="home-flex">
+        <div class="home-img-search">
+                <div class="quote-div">
+                    <h1 class="titre">Ma liste de courses</h1>
+                    <h1 class="quote"></h1>
+                </div>
+        </div>
+    <div class="cat">
+        <div class="container-fluid">
+            <div class="row">
+                {% for category in categories %}
+                    <div class=" col-4 col-xl-3 col-lg-4 col-md-4 cat-selector">
+                        <h4 class="cat-title ">{{category.name}}</h4>
+                        <a href="{{ path("category_show", {id : category.id}) }}">
+                        <img src = "{{ category.picture }}" class="icon" alt="{{ category.picture }}">
+                        <br></a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block title %}Catégories{{ category.name }}{% endblock %}
+
+{% block body %}
+    <div class="catégorie">
+    <h1>{{ category.name }}</h1>
+<ul>
+    {% for product in products %}
+    <li>
+        <div class="delete"><h4>{{ product.name }}</h4>
+            {{ include('product/_delete.html.twig') }}
+        </div>
+
+    </li>
+    {% endfor %}
+</ul>
+    <div class="arrow">
+        <a class="lien" href="{{ path('category_index') }}"><i class="far fa-arrow-alt-circle-left arrow"></i></a>
+        <a class="lien" href="{{ path('product_new') }}"><i class="far fa-arrow-alt-circle-right arrow"></i></a>
+    </div>
+    <div>
+        <img class="category-img" src="{{ 'https://www.cjoint.com/doc/21_02/KBenEk2VXaX_numc3a9riser0001-modific3a9-1-removebg-preview.png' }}" alt="food">
+    </div>
+    </div>
+{% endblock %}

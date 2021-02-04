@@ -1,0 +1,33 @@
+.new_product {
+  .product-img {
+    width: 65vh;
+
+  }
+  .form-control {
+    width : 75%;
+    justify-content: center;
+    margin-top: 5vh;
+  }
+
+  .form-control, h4, button {
+    margin-left: 5vh;
+  }
+  .caddie {
+    font-size: 20pt;
+  }
+  .button-new {
+    color: white;
+    border: none;
+    width: 5vh;
+    padding-top: 0;
+    }
+  .btn-outline-dark:hover {
+    background-color: transparent;
+    text-decoration: none;
+  }
+  .btn-outline-dark:not(:disabled):not(.disabled):active {
+    background-color: transparent;
+    border-color: transparent;
+  }
+  }
+

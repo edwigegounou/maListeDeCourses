@@ -23,7 +23,7 @@ class Product
     private $name;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean", nullable=true)
      */
     private $isChecked;
 
